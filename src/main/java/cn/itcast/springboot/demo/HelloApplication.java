@@ -28,18 +28,18 @@ public class HelloApplication {
 	@RequestMapping("hello")
 	@ResponseBody     // 有这个注解的就会使用消息
 	public String hello(){
-		return "hello world";
+		return "hello world,我爱祖国";
 	}
 	
 	/**
 	 *springboot项目中自定义消息转化器，只需要在@Configuration的类中添加消息转化器的@Bean
 	 *加入到spring容器，就会被springboot自动加入到容器中。
 	 */
-	@Bean
-    public StringHttpMessageConverter stringHttpMessageConverter() {
-        StringHttpMessageConverter converter = new StringHttpMessageConverter(Charset.forName("ISO-8859-1"));
-        return converter;
-    }
+//	@Bean
+//    public StringHttpMessageConverter stringHttpMessageConverter() {
+//        StringHttpMessageConverter converter = new StringHttpMessageConverter(Charset.forName("ISO-8859-1"));
+//        return converter;
+//    }
 	
 	public static void main(String[] args) {
 		SpringApplication.run(HelloApplication.class, args);
