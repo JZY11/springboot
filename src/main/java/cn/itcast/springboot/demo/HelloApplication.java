@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HelloApplication {
 
 	@RequestMapping("hello")
-	@ResponseBody
+	@ResponseBody     // 有这个注解的就会使用消息
 	public String hello(){
 		return "hello world";
 	}
