@@ -2,7 +2,7 @@ package com.taotao.cart.controller.api;
 
 import java.util.List;
 
-import org.apache.commons.collections.CollectionUtils;
+//import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,9 +31,9 @@ public class ApiCartController {
     public ResponseEntity<List<Cart>> queryCartList(@PathVariable("userId") Long userId) {
         try {
             List<Cart> list = this.cartService.queryCartList(userId);
-            if (CollectionUtils.isEmpty(list)) {
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-            }
+//            if (CollectionUtils.isEmpty(list)) {
+//                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+//            }
             return ResponseEntity.ok(list);
         } catch (Exception e) {
             e.printStackTrace();

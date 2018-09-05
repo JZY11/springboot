@@ -6,10 +6,14 @@ package com.taotao.cart.interceptors;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.taotao.cart.service.UserService;
+import com.taotao.cart.threadlocal.UserThreadLocal;
 
 /**
  * @ClassName UserLoginHandlerInterceptor
